@@ -1,0 +1,96 @@
+@use "../mixins" as *;
+@use "../variables" as *;
+
+.contact_section {
+  height: fit-content;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  .container {
+    @extend .container;
+    .contact {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-direction: row;
+      flex-wrap: wrap;
+      h1 {
+        width: 100%;
+        text-align: center;
+        height: 10%;
+      }
+      .contact_img {
+        height: 90%;
+        width: 55%;
+        img {
+          height: 100%;
+          width: 100%;
+          margin-right: 0;
+        }
+      }
+      form {
+        width: 45%;
+        height: 350px;
+        border: 2px solid $black;
+        h2 {
+          width: 100%;
+          text-align: center;
+        }
+        .name,
+        .number,
+        .guests {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin-bottom: 20px;
+          input {
+            width: 90%;
+            border: 2px solid $black;
+            height: 50px;
+            padding-left: 10px;
+          }
+        }
+
+        .send_btn {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: row;
+          height: 40px;
+          button {
+            height: 100%;
+            width: 45%;
+            background-color: orangered;
+            &:hover {
+              background-color: $black;
+              color: $white !important;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@include breakpoints(medium) {
+    .contact_section{
+        height:fit-content
+    }
+}
+@include breakpoints(small){
+    .contact_section{
+        height:fit-content;
+        .container{
+            .contact{
+                .contact_img{
+                    width:100%
+                }
+                form{
+                    width:100%
+                }
+            }
+        }
+    }
+  
+   
+}

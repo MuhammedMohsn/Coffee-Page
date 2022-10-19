@@ -1,0 +1,93 @@
+@use "../variables" as *;
+@use "../mixins" as *;
+nav {
+  height: 40px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  background-color: $white !important;
+  margin-bottom: 10px;
+  img {
+    height: 40px;
+    width: 50px;
+    margin-right: 50px;
+    cursor: pointer;
+  }
+  .list {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    .list_item {
+      margin-right: 35px;
+      a {
+        text-decoration: none;
+        color: $black !important;
+      }
+      a:hover {
+        color: $blue !important;
+      }
+    }
+  }
+  .icon {
+    display: none;
+    height: 100%;
+    cursor: pointer;
+    i {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) scale(1.4);
+    }
+  }
+}
+@include breakpoints(medium) {
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 40px;
+    padding-right: 40px;
+    height: fit-content;
+    .list {
+      display: none;
+    }
+    .icon {
+      display: block;
+      position: relative;
+      i{
+        position: absolute;
+
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(2);
+      }
+    }
+  }
+}
+@include breakpoints(small){
+    nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-left: 20px;
+        padding-right: 20px;
+        height: fit-content;
+        .list {
+            display: none
+        }
+        .icon {
+            display: block;
+            position: relative;
+            i {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%) scale(2);
+            }
+        }
+    }
+}

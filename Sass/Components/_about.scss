@@ -1,0 +1,91 @@
+@use "../_variables.scss" as *;
+@use "../mixins" as *;
+@use "./container" as *;
+.about_section {
+  height: 400px;
+  padding-bottom: 10px;
+  .container {
+    @extend .container;
+    .about {
+      height: 100%;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+
+      .image {
+        height: 100%;
+        width: 40%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        img {
+          height: 100%;
+          width: 100%;
+        }
+      }
+      .content {
+        padding-left: 60px;
+        width: 50%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        flex-direction: column;
+        p {
+          color: $gray;
+          margin-bottom: 30px;
+        }
+        .our_menu_btn {
+          background-color: rgb(162, 68, 34);
+          color: $white !important;
+          width: 150px;
+          height: 40px;
+          text-align: center;
+          border: none;
+          cursor: pointer;
+          font-size: larger;
+          &:hover {
+            background-color: $black !important;
+          }
+        }
+      }
+    }
+  }
+}
+@include breakpoints(small) {
+  .about_section {
+    height: fit-content;
+    margin-bottom: 20px;
+    .container {
+      .about {
+        .image {
+          height: 100%;
+          width: 100%;}
+        .content {width: 100%;}
+      }
+    }
+  }
+}
+@include breakpoints(medium) {
+  .about_section {
+    height: fit-content;
+    margin-bottom: 20px;
+    .container {
+      .about {
+        .image {
+          height: 100%;
+          width: 100%;
+          img {
+            height: 100%;
+            width: 60%;
+          }}
+        .content {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+

@@ -1,0 +1,93 @@
+@use "../mixins" as *;
+@use "../variables" as *;
+@use "./container" as *;
+.footer_section {
+  height: fit-content;
+  .container {
+    @extend .container;
+    .footer {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      height: 100%;
+      .clock,
+      .phone,
+      .address,
+      .email {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 25%;
+        .icon_container {
+          height: 60px;
+          width: 60px;
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background-color: rgba(255, 0, 0, 0.632);
+          i {
+            color: $white !important;
+            transform: scale(1.5);
+          }
+        }
+        h4 {
+          color: $gray !important;
+        }
+      }
+      .email {
+        .icon_container {
+          height: 60px;
+          width: 60px;
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background-color: rgba(255, 0, 0, 0.632);
+          i {
+            color: $white !important;
+            transform: scale(1.5);
+          }
+        }
+      }
+    }
+  }
+}
+@include breakpoints(medium) {
+  .footer_section {
+    height: fit-content;
+  }
+}
+
+@include breakpoints(small) {
+  .footer_section {
+    height: fit-content;
+    .container {
+      .footer {
+        .clock,
+        .phone,
+        .address,
+        .email {
+          width: 50%;
+        }
+      }
+    }
+  }
+}
+@include breakpoints() {
+  .footer_section {
+    height: fit-content;
+    .container {
+      .footer {
+        .clock,
+        .phone,
+        .address,
+        .email {
+          width: 100%;
+        }
+      }
+    }
+  }
+}

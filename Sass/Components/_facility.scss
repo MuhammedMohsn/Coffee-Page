@@ -1,0 +1,82 @@
+@use "../mixins" as *;
+@use "../variables" as *;
+@use "../Components/container";
+.facility_section {
+  height: fit-content;
+  .container {
+    @extend .container;
+    .facility {
+      h1 {
+        font-size: 40px;
+        margin-bottom: 20px;
+        text-align: center;
+      }
+      .box-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        flex-direction: row;
+        height: 100%;
+        .box {
+          height: 100%;
+          width: 24%;
+          display: flex;
+          align-items: flex-start;
+          flex-direction: column;
+          img {
+            align-self: center;
+          }
+          h3 {
+            text-align: center;
+            width: 100%;
+            margin-bottom: 10px;
+          }
+          p {
+            align-self: center;
+            color: $black;
+            text-align: justify;
+            word-break: break-all;
+
+          }
+        }
+      }
+    }
+  }
+}
+
+@include breakpoints(medium) {
+  .facility_section {
+    height: fit-content;
+    .container {
+      .facility {
+        .box-container {
+          .box {
+            height: 100%;
+            width: 30%;
+            margin-bottom: 10px;
+          }
+        }
+      }
+    }
+  }
+}
+@include breakpoints(small) {
+  .facility_section {
+    height: fit-content;
+    .container {
+      .facility {
+        .box-container {
+          .box {
+            height: 100%;
+            width: 100%;
+            margin-bottom: 10px;
+            h3 {
+              padding-right: 49px !important;
+            }
+          }
+        }
+      }
+    }
+  }
+}

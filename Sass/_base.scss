@@ -1,0 +1,9 @@
+* {
+    box-sizing: border-box;
+    transition: all 0.5s
+}
+
+
+*::selection {
+    background-color: rgb(162, 68, 34) !important;
+}

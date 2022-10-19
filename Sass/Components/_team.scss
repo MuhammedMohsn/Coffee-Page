@@ -1,0 +1,64 @@
+@use "./container" as *;
+@use "../mixins" as *;
+
+.team_section {
+  height: fit-content;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  .container {
+    @extend .container;
+    .team {
+      height: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-direction: row;
+      flex-wrap: wrap;
+      padding-top: 10px;
+      h1 {
+        text-align: center;
+        height: 10%;
+        width: 100%;
+      }
+      .team_img {
+        height: 90%;
+        width: 32%;
+        img {
+          height: 100%;
+          width: 100%;
+          margin-right: 0;
+        }
+      }
+    }
+  }
+}
+@include breakpoints(medium){
+    
+    .team_section{
+        height:fit-content;
+        .container{
+            .team{
+                .team_img{
+                    height:90%;
+                    width:48%;
+                    margin-bottom: 10px;
+                    
+                    }
+            }
+        }
+    }
+}
+@include breakpoints(small){
+   .team_section{
+            height:fit-content;
+            .container{
+                .team{
+                    .team_img{
+                        height:90%;
+                        width:100%;
+                        margin-bottom: 10px;
+                        }
+                }
+            }
+        }
+}

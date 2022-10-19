@@ -1,0 +1,12 @@
+@use './_variables.scss' as *;
+@use './base' as *;
+@use './mixins' as *;
+@use './Components/_navbar.scss' as * ;
+@use  './Components/home' as *;
+@use './Components/about' as *;
+@use './Components/facility' as *;
+@use './Components/menu' as *;
+@use './Components/gallery' as *;
+@use './Components/team' as *;
+@use './Components/contact' as *;
+@use './Components/footer' as *;
